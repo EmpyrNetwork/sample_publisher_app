@@ -1,0 +1,17 @@
+<div class="row wrapper">
+<div class="input-group">
+  <span class="input-group-addon">Find</span>
+  <input type="text" class="form-control" placeholder="tacos, cheap dinner, Max's" [(ngModel)]="selectedValue.Name" (click)="suggestion=!suggestion"
+  (input)="suggestion=false"> 
+   
+    <ul *ngIf="suggestion">
+     <li *ngFor="let s of suggestions let i = index"  
+     (mouseover)="highlight(i)" [class.active]="i == selected"
+     (click)="(selectedValue.Name = s.Name) && (suggestion=!suggestion)"> 
+     {{s.Name}}
+     <li>
+		  </ul>
+		   <span class="input-group-addon search" (click)="onItemSelected()">Search</span>
+</div>
+
+

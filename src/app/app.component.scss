@@ -1,0 +1,10 @@
+.empyr-app {
+  display: flex;
+  flex-direction: row;
+
+  .content {
+    flex: auto;
+
+    max-width: calc(100vw - #{75px});
+  }
+}

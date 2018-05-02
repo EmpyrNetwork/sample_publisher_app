@@ -1,0 +1,75 @@
+<div class="container" vw="WEB_SEARCH_VIEW">
+       <div class="row">
+       
+       
+    <section class="col-xs-12 col-sm-6 col-md-12">
+    <h2 *ngIf="searchResults.hits" class="lead">Showing <strong class="text-primary">{{searchResults.results.length}}</strong> of <strong class="text-primary">{{searchResults.hits}}</strong> results found for <strong class="text-primary">Best Restaurants </strong> </h2>
+
+		<article *ngFor="let result of searchResults.results" class="search-result row">
+		 <!-- <div class="hidden-sm hidden-xs map-box">
+    <div class="map"><img src="http://scotthaefner.com/fleet-revealed/images/map.png" width="300" height="280"> </div>
+		</div> -->
+		<div class="col-xs-12">
+		 <div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8">
+			   <div class="row line">
+			   <div class="col-md-7">
+			   				<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object hidden-xs" src="{{result.thumbnailUrl}}" width=90 height=90 alt="food">
+    </a>
+  </div>
+  <div class="media-body">
+				<h3><a href="#" title="">{{result.name}}</a></h3>
+				<div style="display:block;">
+					<i class="glyphicon glyphicon-star"></i>
+                	<i class="glyphicon glyphicon-star"></i>
+					<i class="glyphicon glyphicon-star"></i>
+                	<i class="glyphicon glyphicon-star"></i>
+	                <i class="glyphicon glyphicon-star-empty"></i>
+		         {{result.ratingCount}} reviews
+		         </div>
+			    <div style="display:inline-block; letter-spacing: 2px;">{{result.priceRange}}</div>
+			    <div style="display:inline-block; color:#0288D1;">{{result.categories.join(", ")}}</div>
+								</div>
+				   </div>
+				   </div>    
+			
+			  <div class="col-md-5">
+				<ul>
+					<li>
+						<div>{{result.address.streetAddress}}</div> 
+						<div>{{result.address.city}}, {{result.address.state | uppercase}} {{result.address.postalCode}}</div>
+						</li>
+					<li>{{result.phone}}</li>
+				</ul>
+			    
+			</div>
+				</div>
+			
+			</div>
+			</div>
+			<div class="row" *ngFor="let o of result.offers">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-12 col-md-6 discount" [attr.eid]="o.id"><i class="glyphicon glyphicon-bookmark" style="margin-left:10px; margin-right:10px;"></i> This establishment offers a discount. {{o.finePrint}}.</div>
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-7">
+					<div class="media" style="margin-left: 15px;">
+  
+  <div class="media-body">
+  	<div *ngFor="let b of result.buzz">{{b}}</div>
+	<div *ngIf="result.buzz.length === 0">{{result.knownFor}}</div>
+  </div>
+</div>
+			
+				</div>
+			</div>
+			<span class="clearfix"></span>
+		</article>
+	
+	</section>
+	</div>
+</div>

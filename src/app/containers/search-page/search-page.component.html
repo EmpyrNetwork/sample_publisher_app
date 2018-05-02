@@ -1,0 +1,13 @@
+<div>
+	<header></header>
+</div>
+<br>
+<br>
+<br>
+<div style="padding-top: 60px; margin:0 auto;">
+	
+	<div><searchbar (itemWasSelected)="selectedItem($event)"></searchbar></div>
+	
+	<div style="margin-top:100px;"><search-results [searchResults]="searchResults | async"></search-results></div>
+	
+</div>

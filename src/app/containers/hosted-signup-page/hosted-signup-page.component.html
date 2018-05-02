@@ -1,0 +1,50 @@
+<div>
+	<header></header>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="panel panel-default credit-card-box">
+				<div class="panel-heading display-table">
+					<div class="row display-tr">
+						<h3 class="panel-title display-td">Billing Information</h3>
+					</div>
+				</div>
+				<div class="panel-body">
+					<form role="form" id="payment-form">
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="form-group">
+									<img class="img-responsive" src="http://i76.imgup.net/accepted_c22e0.png">
+									<label for="card-number">Card Number</label> 
+									<div id="card-number" class="field-container"></div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-xs-12">
+								<div class="form-group">
+									<label for="postal-code">Postal Code</label>
+									<input type="text" [(ngModel)]="addressZip" name="postal-code" placeholder="Postal Code" class="form-control" />
+								</div>
+							</div>
+							<div class="col-md-6 col-xs-12">
+								<p>Country</p>
+								<p>United States</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<input class="btn btn-lg btn-block" type="submit" value="Add Card">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

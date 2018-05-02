@@ -1,0 +1,125 @@
+.register-page-container{
+	text-align:center;
+	width: 100%;
+	position: fixed;
+	top: 20%;
+}
+
+.empyr-name-container{
+	width: 100%;
+	margin-left:38px;
+}
+
+.empyr{
+	padding-top:15px;
+	font-size: 25px;
+	text-align: left;
+	font-family: HelveticaNeue-light;
+	color: #174472;
+	font-weight: 200;
+	width:100%;
+}
+
+.slogan{
+	font-size: 14px;
+	text-align: left;
+	color: #4a90e2;
+	font-family: HelveticaNeue-light;
+	font-weight: 200;
+	width:100%;
+}
+
+span:nth-child(1){
+	font-size: 30px;
+}
+
+span:nth-child(3){
+	font-size: 20px;
+}
+
+span:nth-child(5){
+	font-size: 25px;
+}
+
+span:nth-child(7){
+	font-size: 25px;
+}
+
+empyr-warning-text {
+	text-align: left;
+	font-size: 1.6rem;
+
+	/deep/ p {
+	  padding: 30px 30px 15px 30px;
+	}
+}
+
+.register-page-title{
+	display: inline-block;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.register-page-title span{
+	font-family: HelveticaNeue-light;
+	color: #174472;
+	font-weight: 200;
+}
+
+.register-form input{
+	display:block;
+	margin:auto;
+	margin-bottom: 25px;
+	border-radius: 7px;
+	border: 1px solid darkgray;
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-left: 10px;
+	width: 40%;
+	font-size: 16px;
+	color: #111;
+	opacity: 0.7;
+	min-width: 91.5px;
+}
+
+.register-form button{
+	background-color: lightgrey;
+	border:none;
+	border-radius: 25px;
+	padding-top:13px;
+	padding-bottom:13px;
+	width: 40%;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.body-text{
+	width:55%;
+	margin:auto;
+}
+
+.incorrect-register-message{
+	border: 1px solid red;
+	width: 400px;
+	height: 60px;
+	color: red;
+	background-color: none;
+	margin: auto;
+	border-radius: 7px;
+	text-align: left;
+	padding:10px 10px 10px 30px;
+	font-family: HelveticaNeue;
+}
+
+.spacer{
+	margin-bottom: 25px;
+}
+
+.hide{
+	display:none;
+}
+
+.register-form button.bluebtn {
+	background-color: #0288D1;
+}

@@ -1,0 +1,33 @@
+<div>
+  <header></header>
+</div>
+<br>
+<br>
+<br>
+<div class="register-page-container">
+  <div class="body-text">
+
+    <div *ngIf="message | async">
+      <div class="incorrect-register-message">
+        {{ message | async }}
+        <br>
+        Please try again.
+      </div>
+
+      <div class="spacer"></div>
+    </div>
+
+    <form class="register-form" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+      <input type="text" name="email" title="email" placeholder="Email" ngModel required/>
+      <input type="password" name="password" title="password" placeholder="Password" ngModel required/>
+      <input type="text" name="firstName" title="firstName" placeholder="First Name" ngModel required/>
+      <input type="text" name="lastName" title="lastName" placeholder="Last Name" ngModel required/>
+
+      <div>
+        <button class="btn btn-primary" type="submit" [ngClass]="{bluebtn: registerForm.form.valid}"
+                [disabled]="!registerForm.form.valid">Sign Up
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

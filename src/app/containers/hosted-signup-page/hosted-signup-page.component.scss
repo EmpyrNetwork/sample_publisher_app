@@ -1,0 +1,78 @@
+.field-container   {
+  height: 33px;
+  margin-bottom: 1em;
+  padding: 0 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+.field-container.mogl-invalid   {
+  border-color:   tomato;
+}
+.field-container.mogl-valid   {
+  border-color:   limegreen;
+}
+
+.container{
+	padding-top:20px;
+}
+
+p{
+	font-weight:bold;
+}
+
+.panel{
+	width:34%;
+	margin:0 auto;
+}
+
+@media(max-width:1040px){
+	.panel{
+	width:50%;
+	}
+}
+
+@media(max-width:500px){
+	.panel{
+	width:300px;
+	}
+}
+	
+.credit-card-box .panel-title {
+    font-size:18px;
+    font-weight: bold;
+	opacity:.8;
+	
+}
+
+.credit-card-box label {
+    display: block;
+}
+
+/* The old "center div vertically" hack */
+.credit-card-box .display-table {
+    display: table;
+	width:100%;
+    height:40px;
+}
+.credit-card-box .display-tr {
+    display: table-row;
+}
+.credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+}
+
+.btn{
+	margin-bottom:10px; 
+	padding-top:7px;
+	font-size:16px; 
+	height:38px;
+	background-color: #0288D1;
+	color:#fff;
+}
+
+.img-responsive{
+	margin:10px auto;
+}

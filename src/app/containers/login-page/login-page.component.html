@@ -1,0 +1,32 @@
+<div>
+  <header></header>
+</div>
+<br>
+<br>
+<br>
+
+<div class="login-page-container">
+  <div class="body-text">
+
+    <div *ngIf="message | async">
+      <div class="incorrect-login-message">
+        {{ message | async }}
+        <br>
+        Please try again.
+      </div>
+
+      <div class="spacer"></div>
+    </div>
+
+    <form class="login-form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <input type="text" name="username" title="username" placeholder="Username" ngModel required/>
+      <input type="password" name="password" title="password" placeholder="Password" ngModel required/>
+
+      <div>
+        <button class="btn btn-primary" type="submit" [ngClass]="{bluebtn: loginForm.form.valid}"
+                [disabled]="!loginForm.form.valid">Sign In
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+node_modules
+.idea
+.log
+.swp
+.tmp
+.editorconfig
+coverage
+dist
+
+npm-debug.log
+
+.DS_Store
