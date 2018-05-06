@@ -1,35 +1,31 @@
 # Empyr Publisher Sample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+This project demonstrates a sample Angular 2/4 publisher integration that includes direct signup with card, hosted fields signup, venue search, and pixel tracking. This project needs the accompanying API server to run properly.
 
-## Development server
+## Running Locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install` to install the dependencies and `npm start` to run the app locally. Navigate to `http://localhost:4200/` to view the app. The app will automatically reload if you change any of the source files. The app also needs to be configured to use the accompanying API server.
 
-## Code scaffolding
+## Configuration
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+The configuration files are found in the src/environments folder. The following parameters need to be set:
 
-## Build
+```html
+API_URL: 'http://localhost:8090', // the url of the API server, which can be run locally
+API_KEY: 'v3c6191f-f341-4f7c-8a41-55c280db7095' // Empyr API key in the test environment
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Venue Search
 
-## Running unit tests
+The venue search API call is found in the <b>src/app/services/search</b> folder. The code to display search results is in the <b>src/app/components/search-results/results.component.html</b> file.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Signup with Card
 
-## Running end-to-end tests
+The signupWithCard API call is found in the <b>src/app/services/user/user.service.ts</b> file.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Hosted Fields Signup
 
-## Running [Cucumber](https://cucumber.io/) end-to-end tests
+The Hosted Fields implementation can be found in the <b>src/app/containers/hosted-signup-page/hosted-signup-page.component.html</b> and <b>src/app/containers/hosted-signup-page/hosted-signup-page.component.ts</b> files.
 
-First, be sure to modify `cucumberOpts: > tags: []` within `protractor.conf.js` for which test's @ tag you'd want to run. See each Feature file
-for specific tags.
-
-Then, run `npm run e2e -- --no-serve` to execute.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Pixel Tracking
+The pixel tracking implementation can be found in the <b>src/app/components/search-results/results.component.ts</b> (setup code) and the <b>src/app/components/search-results/results.component.html</b> (tracking code) files.
