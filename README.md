@@ -1,6 +1,6 @@
 # Empyr Publisher Sample
 
-This project demonstrates a sample Angular 2/4 publisher integration that includes direct signup with card, hosted fields signup, venue search, and pixel tracking. This project needs the accompanying API server to run properly.
+This project demonstrates a sample Angular 2/4 publisher integration that includes direct signup with card, hosted fields signup, venue search, and pixel tracking. This project needs the sample publisher server to run properly (https://github.com/EmpyrNetwork/sample_publisher_server).
 
 ## Running Locally
 
