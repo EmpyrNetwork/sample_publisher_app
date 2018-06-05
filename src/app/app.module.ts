@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { RouterStoreModule } from '@ngrx/router-store';
+import { AgmCoreModule } from '@agm/core';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
@@ -40,6 +41,9 @@ import { reducer } from './reducers';
 
 const imports = [
   BrowserModule,
+  AgmCoreModule.forRoot({
+    apiKey: 'YOUR_API_KEY'
+  }),
   RouterModule.forRoot(routes),
   FormsModule,
   HttpModule,
@@ -62,7 +66,7 @@ const imports = [
     RegisterPageComponent,
     SearchPageComponent,
     SignupWithCardPageComponent,
-    HostedSignupPageComponent,
+    HostedSignupPageComponent
   ],
   imports: imports,
   exports: [ RouterModule ],

@@ -19,7 +19,6 @@ export class SearchService {
       .post(SearchService.SEARCH_ENDPOINT, { query })
       .map((response: Response): any => {
         const searchResult = JSON.parse(response['_body']).response.results;
-        console.log(searchResult)
         return searchResult;
       });
   }

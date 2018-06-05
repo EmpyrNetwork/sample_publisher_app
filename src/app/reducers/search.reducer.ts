@@ -12,7 +12,6 @@ export const defaultState: State = {
 export function reducer(state = defaultState, action: Action) {
   switch (action.type) {
     case SearchAction.RetrieveSearchResultAction.ACTION_TYPE: {
-    	console.log(Object.assign({}, state, { searchResult: action.payload.searchResult }))
       return Object.assign({}, state, { searchResult: action.payload.searchResult });
     }
     default:

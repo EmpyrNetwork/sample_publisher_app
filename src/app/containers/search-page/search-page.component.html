@@ -4,10 +4,19 @@
 <br>
 <br>
 <br>
-<div style="padding-top: 60px; margin:0 auto;">
-	
+<div class="search-container">
 	<div><searchbar (itemWasSelected)="selectedItem($event)"></searchbar></div>
 	
-	<div style="margin-top:100px;"><search-results [searchResults]="searchResults | async"></search-results></div>
+	<div class="map-wrapper">
+      <agm-map #gm [latitude]="lat" [longitude]="long" [zoom]="zoom" [scrollwheel]="false">
+        <agm-marker *ngFor="let m of markers" [latitude]="m.latitude" [longitude]="m.longitude" [title]="m.name">
+        	<agm-info-window>
+		        <strong>{{m.name}} </strong>
+		    </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+
+	<div><search-results [searchResults]="searchResults | async"></search-results></div>
 	
 </div>
