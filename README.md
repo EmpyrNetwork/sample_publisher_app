@@ -11,7 +11,7 @@ Run `npm install` to install the dependencies and `npm start` to run the app loc
 The configuration files are found in the src/environments folder. The following parameters need to be set:
 
 ```html
-API_URL: 'http://localhost:8090', // the url of the API server, which can be run locally
+API_URL: 'http://localhost:8080', // the url of the API server, which can be run locally
 API_KEY: 'v3c6191f-f341-4f7c-8a41-55c280db7095' // Empyr API key in the test environment
 ```
 
